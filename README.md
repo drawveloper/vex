@@ -11,7 +11,7 @@ dashboard for experiment management and monitoring.
 
 Configuration changes can affect external services too with the implementation
 of an Integration service. `vex` native serverless functions dynamically receive
-up-to-date configuration changes througout a global edge platform so that
+up-to-date configuration changes throughout a global edge platform so that
 configuration changes take effect in seconds, not hours, allowing you to iterate
 and learn faster than ever on production traffic.
 
