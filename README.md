@@ -1,13 +1,13 @@
 `vex` is the next-generation VTEX extension platform and toolset. The `vex` CLI
 helps VTEX users compose, deploy and evolve their Digital Commerce Application.
 
-Using `vex`, you can **clone** a _VTEX Digital Commerce Application repository_
-locally, edit the configuration for any of its services, create new experiments
-changing specific configurations for specific audiences, and deploy it to
-production with built-in progressive rollout. Unsuccessful configuration changes
-are automatically rolled back with minimal blast radius. Successful changes are
-applied and new experiments become available for control in `vex launchpad`, the
-dashboard for experiment management and monitoring.
+Using `vex`, you can **clone** a _VTEX Digital Commerce Infrastructure
+repository_ locally, edit the configuration for any of its services, create new
+experiments changing specific configurations for specific audiences, and deploy
+it to production with built-in progressive rollout. Unsuccessful configuration
+changes are automatically rolled back with minimal blast radius. Successful
+changes are applied and new experiments become available for control in
+`vex launchpad`, the dashboard for experiment management and monitoring.
 
 Configuration changes can affect external services too with the implementation
 of an Integration service. `vex` native serverless functions dynamically receive
@@ -50,9 +50,9 @@ blocks for using the platform.
 - `vex-deploy` — deploys Deno scripts to a global edge network. This is the
   low-level building block in order to have side-effects, like running some code
   reacting to a platform event or an HTTP route in the public domain.
-- `vex-challenge` — allows definition and extension of resources, policies, and
-  all other access, authentication and authorization methods for a service
-  (Analog to AWS IAM).
+- `vex-auth` — allows definition and extension of resources, policies, and all
+  other access, authentication and authorization methods for a service (Analog
+  to AWS IAM).
 - `vex-experiment` — allows definition of Experiments, which may then be used
   across other configuration files to dynamically alter the behavior of running
   services by using the web Experiment admin.
