@@ -1,0 +1,1 @@
+- [ ] Check types for configurations with https://github.com/colinhacks/zod
