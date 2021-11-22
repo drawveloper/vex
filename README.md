@@ -1,6 +1,6 @@
 # vex - the VTEX Extension platform (of platforms)
 
-`vex` is an open-source `Commerce Platform As Code` tool built on top of `deno` and `git`. The `vex` toolset allows teams to **compose, deploy and evolve** a fully-functional `Commerce Platform` to VTEX within minutes instead of months. Start fast with a `Commerce Platform Template`, iterate by composing and configuring multiple `VTEX Apps`, deploy safely with `Progressive Releases`, discover the working strategies by experimenting with `Flags` and double-down by building and deploying what matters to our global serverless edge infrastructure.
+`vex` is an open-source `Commerce Platform As Code` tool built on top of `deno` and `git`. The `vex` toolset allows teams to **compose and deploy** a fully-functional `Commerce Platform` to VTEX within minutes instead of months. Start fast with a `Commerce Platform Template`, iterate by composing and configuring multiple `VTEX Apps`, deploy safely with `Progressive Releases`, discover the working strategies by experimenting with `Flags` and double-down by building and deploying what matters to our global serverless edge infrastructure.
 
 # What is vex for?
 
