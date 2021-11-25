@@ -10,7 +10,7 @@
 - Configure and provision fulfillment nodes, transportation partners and your entire logistics operation through code;
 - Create apps that are highly reliable, scalable and cost-effective in the cloud without worrying about the underlying infrastructure.
 
-The `vex` toolset allows teams to **compose and deploy** a **complete, end-to-end** `Enterprise Commerce Platform` to the VTEX edge cloud within minutes instead of months. Complete means vex orchestrates not only the frontend, digital experience layer, but also all backend services and infrastructure required to operate a modern, unified commerce platform.
+The `vex` toolset allows teams to **compose and deploy** a **complete, end-to-end** `Enterprise Commerce Platform` to the VTEX edge cloud within minutes instead of months. End-to-end means `vex` orchestrates not only the frontend, digital experiences layer, but also all backend services and infrastructure required to operate a modern, unified commerce platform scalably and reliably.
 
 # What is vex for?
 
