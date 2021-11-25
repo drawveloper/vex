@@ -1,8 +1,7 @@
-import { serve } from "https://deno.land/std@0.114.0/http/server.ts";
+import { handleRequest, withLog } from "./land/handler.ts";
+import { listenAndServe } from "https://deno.land/std@0.108.0/http/server.ts";
 
-function handler(_req: Request): Response {
-  return new Response("Hello, vex.");
-}
+const handler = withLog(handleRequest);
 
-console.log("Listening on http://localhost:8000");
-await serve(handler);
+console.log("The server is available at http://localhost:8080");
+listenAndServe(":8080", handler);
