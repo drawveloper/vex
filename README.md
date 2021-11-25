@@ -1,20 +1,32 @@
 # vex - the VTEX Extension platform (of platforms)
 
-`vex` is an open-source `Commerce Platform As Code` tool built on top of `deno` and `git`. The `vex` toolset allows teams to **compose and deploy** a fully-functional `Commerce Platform` to VTEX within minutes instead of months. Start fast with a `Commerce Platform Template`, iterate by composing and configuring multiple `VTEX Apps`, deploy safely with `Progressive Releases`, discover the working strategies by experimenting with `Flags` and double-down by building what matters with our global serverless edge infrastructure.
+`vex` is an open-source `Commerce Platform As Code` tool built on top of `deno` and `git`. The `vex` toolset allows teams to **compose and deploy** a fully-functional `Commerce Platform` to the VTEX edge cloud within minutes instead of months. 
 
 # What is vex for?
 
-`vex` allows VTEX account owners to:
+`vex` allows VTEX users to:
 
-1. *Compose* **apps** from the VTEX ecosystem into a commerce **platform**;
-2. *Deploy* it to the VTEX **global edge** infrastructure;
-3. *Evolve* it by managing apps' **configuration**, creating **flags** and publishing **releases** through a **single control panel**.
+1. *Compose* **apps** from the VTEX ecosystem into your private cloud commerce **platform** and get a _first version to production_ quickly;
+2. *Evolve* your platform by managing your apps, publishing **releases** and creating **flags** to test new **configurations** for specific **audiences** through a **single control panel**.
+3. *Build* new apps that run on the serverless VTEX **global edge** infrastructure at **low cost** and create new capabilites for any `vex` platform, share or sell them in the `commerce exchange`;
+
+*Compose, Evolve, Build*
+
+With `vex`, you start fast by choosing a `platform template`, which is a collection of pre-configured apps specifically designed for an industry and region, e.g. `fashion-europe`, `b2c-brazil`, `marketplace-latam`, and customizing it to **compose** the platform that fits your business needs. 
+
+The `vex admin` is the **single control panel** where you can **monitor** your platform performance and **control** how apps behave by managing their **configuration**. Then, you can deploy changes safely with `Progressive Releases` and create new `Flags`. Every deploy is a separate **release**, so you can always see the _exact list of changes_ that occurred and **rollback quickly**, if needed. 
+
+`Flags` let you experiment with choosing some specific configuration for specific **audiences**. Observe the outcomes to decide whether to make those changes available for your entire audience. Or, you can simply group some changes under a flag and schedule it for a specific time (like `black-friday-2021`). After you're done, simply archive the flag. 
+
+For developers, `Apps` let you **build what matters** leveraging our global serverless edge infrastructure. That means apps scale to demand automatically and are served close to your users, guaranteeing faster responses. You can focus on writing `deno` functions that react to platform events (like new order), or to platform public routes (exposing APIs in your domain). 
 
 ## What is a "platform"? 
 
-A **Platform** is a combination of configured **apps** and declared **flags** which can be deployed to the VTEX infrastructure. Every platform receives a subdomain at `https://<platform>.vtex.land`. This points to the `main` branch of the repo at `https://github.com/vtex-platforms/<platform>`. A platform may be locally built and run in your computer. When deployed to VTEX, it leverages our global edge infrastructure that scales quickly to any amount of demand. 
+A **Platform** is a combination of configured **apps** which can be deployed to the VTEX infrastructure. It is represented as a list of TypeScript files in a git repository. Each `.ts` file represents an **installed app** in this platform, and contain this app's configuration. 
 
-Apps installed to a platform are represented as a list of TypeScript files at the root of the repository. These files are the default configuration for the current release. When running, apps in the platform can be configured on a web **admin**. Changes to configuration may be *committed* into a new platform **release**, which can become a **deploy preview** under a new URL, or can be deployed directly to production (being merged to master).
+These files are the default configuration for the current release. When running, apps in the platform can be configured on a web **admin**. Changes to configuration may be *committed* into a new platform **release**, which can become a **deploy preview** under a new URL, or can be deployed directly to production (being merged to main). **Flags** are declared _as part of_ a release, like the configuration of any other app. First, you release a new flag, then you activate it and add an audience.
+
+Every platform receives a subdomain at `https://<platform>.vtex.land`. This points to the `main` branch of the repo at `https://github.com/vtex-platforms/<platform>`. A platform may be locally built and run in your computer. When deployed to VTEX, it leverages our global edge infrastructure that scales quickly to any amount of demand. 
 
 ## What is a "release" and a "flag"?
 
@@ -38,7 +50,9 @@ Users buy and install apps which create the right level of abstraction for them 
 
 ## What is an "integration"?
 
-**Integrations** are a specific type of app, which use `vex` serverless functions to exchange tokens with external API's and subsequently remotely control their configuration and behavior or otherwise generate side-effects and observe their consequences. Integrations may offer limited control to  Flags or Releases, depending on the capacities of the external API. An external API might integrate `vex` itself as a remote configuration manager in order to fully leverage of flags and releases.
+**Integrations** are a specific type of app, which use `vex` serverless functions to exchange tokens with external API's and subsequently remotely control their configuration and behavior or otherwise generate side-effects and observe their consequences. 
+
+Integrations may offer limited control to  Flags or Releases, depending on the capacities of the external API. An external API might integrate `vex` itself as a remote configuration manager in order to fully leverage of flags and releases. At the very least, integrations can always produce side-effects by calling APIs and responding to external hooks by defining public endpoints.
 
 # Using vex as a developer
 
