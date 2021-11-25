@@ -1,8 +1,6 @@
 # vex - the VTEX Extension platform
 
-`vex` is an open-source software development framework for defining a commerce platform in code and provisioning it on managed multi-cloud infrastructure.
-
-`vex` enables you to:
+`vex` is an open-source software development framework for defining a commerce platform in code and provisioning it on managed multi-cloud infrastructure. `vex` enables you to:
 
 - Manage and configure all your sales channels, from web storefronts, mobile apps, live commerce and conversational commerce to in-store solutions;
 - Instantly connect to a deep network of suppliers and sellers, accessing millions of products and services with a few lines of code;
