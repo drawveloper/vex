@@ -48,5 +48,5 @@ export function handleRequest(request: Request) {
     return handleRegistryRequest(url);
   }
 
-  return new Response("Hello, vex.");
+  return new Response("Hello, vex. What are you going to build?");
 }

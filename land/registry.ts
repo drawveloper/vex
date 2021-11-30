@@ -3,7 +3,7 @@
 import { parseNameVersion } from "./registry_utils.ts";
 
 export const GITHUB_RAW =
-  "https://raw.githubusercontent.com/vtex-apps";
+  "https://raw.githubusercontent.com/vtex-apps/";
 
 export async function handleRegistryRequest(url: URL): Promise<Response> {
   const entry = parsePathname(url.pathname);
