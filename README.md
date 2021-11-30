@@ -62,6 +62,15 @@ Users buy and install apps which create the right level of abstraction for them 
 
 Integrations may offer limited control to  Flags or Releases, depending on the capacities of the external API. An external API might integrate `vex` itself as a remote configuration manager in order to fully leverage of flags and releases. At the very least, integrations can always produce side-effects by calling APIs and responding to external hooks by defining public endpoints.
 
+
+## Examples
+
+Some examples of repositories implementing apps and platforms:
+
+- [vtex-apps/std](https://github.com/vtex-apps/std) - the standard library for vex, implementing all core services.
+- [vtex-apps/webops](https://github.com/vtex-apps/webops) - the VTEX end-to-end frontend platform.
+- [vtex-platforms/fashioneurope](https://github.com/vtex-platforms/fashioneurope) - an example platform with a storefront.
+
 # Using vex as a developer
 
 For developers, `vex` allows **apps** to declare the **configuration** they accept both at **build-time** and at **run-time**, as well as the **infrastructure** they require to run. Apps may also declare the **resources** they own and manage, as well as the **policies** they require to access other apps' resources.
@@ -106,33 +115,3 @@ export default new App({
 - `vex-flag` — allows definition of Experiments, which may then be used across other configuration files to dynamically alter the behavior of running services by using the web Experiment admin.
 - `vex-admin` — allows extension of the Admin web and CLI by implementing specific components for one or more configuration fields, or to completely override the admin UI as a first-class Next application. 
 - `vex-monitor` — allows definition of Outcomes with metrics and alarms for the running service.
-
-
-## WIP ... types
-
-
-```
-type BuildConfig {
-
-}
-
-type BuildResult {
-
-}
-
-onBuild((build: BuildConfig) : BuildResult {
-
-})
-
-type RunConfig {
-
-}
-
-onEvent((build: BuildConfig, run: EventRunConfig) {
-    
-})
-
-onRoute((build: BuildConfig, run: RouteRunConfig) {
-    
-})
-```
